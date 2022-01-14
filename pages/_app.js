@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps }) {
     <div>
       <nav>
         <p>PulseMarket</p>
-        <div>
+        <div className='text-pink-500'>
           <Link href="/">
             <a>
               Browse NFTs
