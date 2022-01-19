@@ -8,8 +8,6 @@ import Web3Modal from 'web3modal';
 // import contracts
 
 export default function Home() {
-  const 
-
   return (
     <div className="flex justify-center">
       <h1>What it do tho?</h1>

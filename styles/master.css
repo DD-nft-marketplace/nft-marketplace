@@ -1,0 +1,70 @@
+.main-header{
+  display: flex;
+  flex-direction: row;
+  gap: .5rem;
+  background-color: #DADADA;
+  align-items: center;
+  height: 4rem;
+}
+
+.main-header > h1 {
+  font-size:1.5rem;
+}
+
+.header-nav{
+  margin-left: auto;
+  margin-right: 1rem;
+}
+
+.header-nav > ul {
+  list-style-type: none;
+}
+
+.list-item{
+  padding: 1rem;
+  display:  inline;
+  background-color: #96EAEF;
+  border-radius: 15px;
+  font-size: 1.1rem;
+  margin-left: .5em;
+}
+
+/* This requires a media query */
+.profile-photo{
+  border-radius: 50%;
+}
+
+/* DASHBOARD */
+.section-default{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.trending-title{
+  font-size: 2rem;
+}
+
+.trending-box{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: .5rem;
+}
+
+/* LOGIN */
+
+.section-option{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 28vw;
+}
+
+.section-option > h2 {
+  margin-left: 2rem;
+  font-size: 1.2rem;
+}
