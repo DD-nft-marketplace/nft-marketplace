@@ -120,3 +120,15 @@ h3:nth-child(2){
   border-radius: 25px;
   font-size: 1.5rem;
 }
+
+/* BROWSE NFTS */
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
