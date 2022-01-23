@@ -82,7 +82,7 @@ export default function Browse(){
   
   return(
     <>
-    <section>
+    <section className="section-default">
       <Search 
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
