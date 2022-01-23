@@ -3,9 +3,27 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Web3Modal from 'web3modal';
 import { useRouter } from "next/router";
-import Image from 'next/image'
+import Image from 'next/image';
+
+// import {
+//     nftaddress
+// } from 'address/file/path'
+
+import NFT from '../backEnd/abis/NFT.json';
 
 export default function NFTinfo({query}) {
+
+    async function buyNft(nft) {
+      const web3Modal = new Web3Modal();
+      const connection = await web3Modal.connect();
+      const provider = new ethers.providers.Web3Provider(connection);
+      const signer = provider.signer();
+      const contract = new ethers.Contract(nftaddress, NFT.abi, signer)
+
+      const price = ethers.utils.parseUnits(nft.price.toString(), 'ether');
+
+    }
+
     return (
         <div className="trending-box" style={{marginTop: "2rem"}}>
             <div className="market-page nft-entry">

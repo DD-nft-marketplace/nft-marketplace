@@ -25,6 +25,8 @@ contract NFT is ERC721, Ownable {
     return true;
   }
 
+  // Need create market sale function to start the transfer of nft
+
   function buy(uint _id) external payable {
     _validate(_id); //check req. for trade
     _trade(_id); //swap nft for eth
