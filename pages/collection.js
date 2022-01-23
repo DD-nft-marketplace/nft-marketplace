@@ -82,8 +82,8 @@ export default function Collection() {
 
     
     async function loadNFTs() {
-      // logic to load NFTs from contract
-      setNfts(items)
+      // uncomment below to load page with mock NFTs
+      // setNfts(items)
       setLoadingState('loaded')
     }
     
