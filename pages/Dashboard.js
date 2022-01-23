@@ -20,25 +20,37 @@ export default function Dashboard() {
       id  : 1,
       img : "/crusader1.png",
       name: "PROTOCRUSADER1",
-      price: "1 ETH"
+      price: "1 ETH",
+      owner: "@Anon908",
+      creator: "@Crusader",
+      description: "Lorem Sum Cum Lade Negus Ave"
     },
     {
       id : 2,
       img : "/crusader2.png",
       name: "PROTOCRUSADER2",
-      price: "1 ETH"
+      price: "1 ETH",
+      owner: "@Anon888",
+      creator: "@Crusader",
+      description: "Lorem Sum Cum Lade Negus Ave"
     },
     {
       id: 3,
       img : "/crusader3.png",
       name: "PROTOCRUSADER3",
-      price: "1 ETH"
+      price: "1 ETH",
+      owner: "@Anon877",
+      creator: "@Crusader",
+      description: "Lorem Sum Cum Lade Negus Ave"
     },
     {
       id : 4,
       img : "/special.png",
       name: "PROTOCRUSADER4",
-      price: "1 ETH"
+      price: "1 ETH",
+      owner: "@Anon328",
+      creator: "@Crusader",
+      description: "Lorem Sum Cum Lade Negus Ave"
     }
   ])
 
@@ -48,27 +60,28 @@ export default function Dashboard() {
         <h1 className="trending-title">Currently Trending</h1>
         <div  className="trending-box">
           {nftentries.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4">
-              {nftentries.map((nft) => {
+              nftentries.map((nft) => {
                 return (
-                  <div>
-                    <Image src={nft.img} width={100} height={100} alt="NFT Image" />
+                  <div className="nft-entry">
+                    <Image src={nft.img} width={350} height={350} alt="NFT Image" />
                     <h2>{nft.name}</h2>
                     <h3>{nft.price}</h3>
-                    <button onClick={() => {
+                    <button className="list-item" onClick={() => {
                               router.push({
                                 pathname: "/nft-info",
                                 query: { img: nft.img,
                                         name: nft.name,
-                                        price: nft.price
-                                      } 
+                                        price: nft.price,
+                                        owner: nft.owner,
+                                        creator: nft.creator,
+                                        description: nft.description
+                                      }
                               })
                             }
                       }>MORE</button>
                   </div>
                 )
-              })}
-            </div>
+              })
           ): (
             'No NFTS here'
           )

@@ -36,13 +36,14 @@ function MyApp({ Component, pageProps }) {
   return(
     <div>
       <header className='main-header'>
-        <Link href="/Dashboard">
-          <Image src={"/costanza.jpg"} width={50} height={50} className='profile-photo' alt="Profile Image" />
-        </Link>
+        <Image src={"/costanza.jpg"} width={50} height={50} className='profile-photo' alt="Profile Image" />
         <h1>@AnonAnonson</h1>
         <nav  className="header-nav">
           <ul>
-            <Link href="/">
+          <Link href="/Dashboard">
+            <li className='list-item'>Dashboard</li>
+              </Link>
+            <Link href="/Browse">
               <li className='list-item'>Browse NFTs</li>
                 </Link>
             <Link href="/collection">
